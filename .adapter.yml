@@ -1,6 +1,6 @@
 name: Refungible Estate
 description: An example adapter that does sends test real estate data,This adaptar is send test data created for hackathon.
-node_identifier: realEstate
+node_identifier: refungible-estate
 platforms:
   - Docker
   - AWS Lambda
