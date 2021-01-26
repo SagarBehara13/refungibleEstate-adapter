@@ -16,45 +16,46 @@ app runs at port:8080
 Send Request with following attributes
 
 method:- POST,
-body:- { "id": 0, "data": { "name": "Mannat"} }
+body:- { "id": 0, "data": {  "tokenId": 1 } }
 URL:- "http://localhost:8080"
 
 OR
 
 # Copy this query in the terminal/postman
-curl -X POST \
-  http://localhost:8080/ \
-  -H 'Postman-Token: ac14a2c7-7c90-4817-88c0-552044b2fb54' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -d '{ "id": 0, "data": { "name": "Mannat"} }'
+curl --location --request POST 'http://localhost:8080' \
+  --header 'Content-Type: application/json' \
+  --header 'Cookie: sails.sid=s%3AHYkPqnIr0QvMvrUXGZCZ8HZUX5mHSsl1.Fu004NCfxYWKUcIyYo9fVEhMeR4mPFGM0Vqlpjigk6I; connect.sid=s%3AgqjwNeY7ykOiBhUm0r5HdSEfA32LKlQU.rGjRKhdpVSA5QHwBzO0t0ufE22sjFIzw2gE%2B%2BZzROHg' \
+  --data-raw '{
+      "id": 0, 
+      "data": { "tokenId": 2 } 
+  }'
   
 ```
 # Example Response
 ```
 {
     "jobRunID": 0,
-    "data": [
-        {
-            "_id": "5f625f9008db9e00178eb21b",
-            "name": "Mannat",
-            "location": "Bandra, Mumbai",
-            "owner": "Jon Doe",
-            "type": "Penthouse",
-            "country": "India",
-            "surfaceArea": 3000,
-            "closePrice": 29933,
-            "imageUrl": "",
-            "Details": "",
-            "zipcode": "",
-            "contact": "+911234567890",
-            "__v": 0
-        }
-    ],
-    "result": {
-        "name": "Mannat",
-        "surfaceArea": 3000
+    "data": {
+        "_id": "600fff73c329ba1712dcec66",
+        "tokenId": 2,
+        "name": "Aave",
+        "symbol": "Aave",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw8H9ac470u0xea6VieQbNJnt0OAOykOEaOQ&usqp=CAU",
+        "details": "Aave Defi Protocols",
+        "sqftArea": 100,
+        "pricePerSqft": 1,
+        "type": "blockchain",
+        "rent": 1,
+        "amountStaked": 0,
+        "votes": 0,
+        "minimumAmountCreation": 50,
+        "org": "Aave",
+        "link": "http",
+        "createdAt": "2021-01-26T11:39:31.260Z",
+        "__v": 0,
+        "result": null
     },
+    "result": null,
     "statusCode": 200
 }
 ```
