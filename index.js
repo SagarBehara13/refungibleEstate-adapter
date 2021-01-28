@@ -6,7 +6,7 @@ const customError = (data) => {
 }
 
 const customParams = {
-  tokenId: ['tokenId', 1, 2, 3],
+  tokenId: ['tokenId', '1', '2', '3'],
   endpoint: false
 }
 
